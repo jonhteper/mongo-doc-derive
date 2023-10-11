@@ -1,0 +1,26 @@
+[package]
+name = "mongo-doc-derive"
+version = "0.1.0"
+edition = "2021"
+authors = ["JP <jonhteper@protonmail.com>"]
+license = "MIT"
+description = "proc-macro to auto generate DTOs for MongoDB"
+repository = "https://github.com/jonhteper/mongo-doc-derive"
+keywords = []
+
+[lib]
+name = "mongo_doc_derive"
+proc-macro = true
+path = "src/lib.rs"
+
+[dependencies]
+syn = {version = "1.0.109", features = ["full"]}
+quote= "1.0"
+proc-macro2 = "1.0"
+
+
+[dev-dependencies]
+serde = "1.0.180"
+serde_derive = "1.0.180"
+serde_json = "1.0.107"
+uuid = {version = "1.4.1", features = ["serde"]}
